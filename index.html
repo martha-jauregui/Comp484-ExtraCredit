@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Math.js Grapher</title>
+    <meta charset="UTF-8">
+    <title>Math.js Graphing Engine</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="controls">
-        y = <input type="text" id="equationInput" value="x^2">
-        <button id="graphBtn">Graph it!</button>
-    </div>
+    <div class="app-container">
+        <header>
+            <h1>Graphing Engine</h1>
+            <p>Powered by Math.js & HTML5 Canvas</p>
+        </header>
 
-    <canvas id="graphCanvas" width="500" height="500"></canvas>
+        <div class="controls">
+            <div class="input-group">
+                <span class="prefix">y =</span>
+                <input type="text" id="equationInput" value="x^2" placeholder="e.g., sin(x) * 2">
+            </div>
+            <button id="graphBtn">Plot Function</button>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="graphCanvas" width="600" height="400"></canvas>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
